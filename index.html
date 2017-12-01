@@ -1,140 +1,258 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>Artur Wilanowski</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+    .navbar{
+        margin-bottom: 0;
+        border-radius: 0;
+        background-color: #232b29;
+        color: #FFF;
+        padding: 1% 0;
+        font-size: 1.2em;
+        border: 0;
+    }
+
+    .navbar-brand{
+        float: left;
+        min-height: 55px;
+        padding: 0 15px 5px;
+    }
+
+    .navbar-inverse .navbar-nav .active a, .navbar-inverse .navbar-nav .active a:focus, .navbar-inverse .navbar-nav .active a:hover{
+        color: #FFF;
+        background-color: #232b29;
+    }
+
+    .navbar-inverse .navbar-nav li a {
+        color: #D5D5D5;
+    }
+
+    .carousel-caption{
+        top: 50%;
+        transform: translateY(-50%);
+        text-transform: uppercase;
+    }
+
+    .btn {
+        font-size: 18px;
+        color: #FFF;
+        padding: 12px 22px;
+        background: #232b29;
+        border: 2px solid #FFF;
+    }
+
+    .container{
+        margin: 4% auto;
+    }
+
+    #icon {
+        max-width: 200px;
+        margin: 1% auto;
+    }
+
+    footer{
+        width: 100%;
+        background-color: #232b29;
+        padding: 3%;
+        color: #FFF;
+    }
+
+    .fa {
+        padding: 15px;
+        font-size: 25px;
+        color: #FFF;
+    }
+
+    .fa:hover{
+        color: #D5D5D5;
+        text-decoration: none;
+    }
+
+    @media (max-width: 900px){
+        .fa{
+            font-size: 20px;
+            padding: 10px;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .carousel-caption {
+            display: none;
+        }
+        #icon {
+            max-width: 200px;
+        }
+        h2 {
+            font-size: 1.7em;
+        }
+    }
+
+
     
-    <meta charset="UTF-8">
-    
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    
-    <title>Szkolenie HTML + CSS</title>
-    
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-    
-    <link rel="stylesheet" href="style.css">
-    
+    </style>
 </head>
 <body>
-    
-  
-    
-    <!-- <div class="form container">
-        <h1>Rejestracja</h1>
-        <h3>To zawsze jest darmowe!</h3>
-        
-        <form method="GET" action="">
-            
-            <div class="row">
-                <div class="col-xs-12 col-sm-9 col-md-6 col-lg-4">
-                    <div class="form-group">
-                        <label for="imie">Imię</label>
-                        <input type="text" class="form-control" id="imie" name="imie" placeholder="Marcin" required>
-                    </div>
-                </div>
-                
-                <div class="col-xs-12 col-sm-9 col-md-6 col-lg-4">
-                    <div class="form-group">
-                        <label for="nazwisko">Nazwisko</label>
-                        <input type="text" class="form-control" id="nazwisko" name="nazwisko" placeholder="Nazwisko" required>
-                    </div>
-                </div>
-                
-                <div class="col-lg-4 col-md-12">
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" class="form-control" id="email" name="email" placeholder="example@example.com" required>
-                    </div>
-                </div>
-                
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!-- <a class="navbar-brand" href="#"><img src="img/java.png"></a> -->
             </div>
-            
-            <div class="form-group">
-                <label for="haslo">Hasło</label>
-                <input type="password" class="form-control" id="haslo" placeholder="Password">
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar right">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#">My Skills</a>
+                    <li><a href="#">About Me</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
             </div>
-            
-            <h3>Data urodzenia</h3>
-            
-            <div class="row">
-                
-                <div class="col-md-6">
-                    <div class="row">
-                        <div class="col-md-4">
-                            <select name="" id="" class="form-control">
-                                <option value="">Item 1</option>
-                                <option value="">Item 2</option>
-                                <option value="">Item 3</option>
-                                <option value="">Item 4</option>
-                                <option value="">Item 5</option>
-                                <option value="">Item 6</option>
-                                <option value="">Item 7</option>
-                            </select>
-                        </div>
-                        <div class="col-md-4">
-                            <select name="" id="" class="form-control">
-                                <option value="">Item 1</option>
-                                <option value="">Item 2</option>
-                                <option value="">Item 3</option>
-                                <option value="">Item 4</option>
-                                <option value="">Item 5</option>
-                                <option value="">Item 6</option>
-                                <option value="">Item 7</option>
-                            </select>
-                        </div>
-                        <div class="col-md-4">
-                            <select name="" id="" class="form-control">
-                                <option value="">Item 1</option>
-                                <option value="">Item 2</option>
-                                <option value="">Item 3</option>
-                                <option value="">Item 4</option>
-                                <option value="">Item 5</option>
-                                <option value="">Item 6</option>
-                                <option value="">Item 7</option>
-                            </select>
-                        </div>
-                    </div>
+        </div>
+    </nav>
+
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <img src="img/gory.jpg" alt="" style="width: 100%; height: 80%;">
+                <div class="carousel-caption">
+                    <h1>get to know !</h1>
+                    <br>
+                    <button type="button" class="btn btn-default">Get Started</button>
                 </div>
-                
             </div>
-            
-            <button type="submit" class="btn btn-default">Submit</button>
-        </form>
-    </div> -->
-    <div class="wpisy">
-        <div class="wpis">Wpis 1</div>
-        <div class="wpis">Wpis 2</div>
-        <div class="wpis">Wpis 3</div>
-        <div class="wpis">Wpis 4</div>
-        <div class="wpis">Wpis 5</div>
-        <div class="wpis">Wpis 6</div>
+            <div class="item">
+                <img src="img/gory1.jpg" alt="" style="width: 100%; height: 70%">
+            </div>
+            <div class="item">
+                <img src="img/gory2.jpg" alt="" style="width: 100%; height: 70%;">
+            </div>
+        </div>
+        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div> 
+
+    <div class="container text-center">
+        <h2>My Skills</h2>
+        <div class="row">
+            <div class="col-sm-4">
+                <img src="img/java.png" id="icon">
+                <h4>Java</h4>
+            </div>
+            <div class="col-sm-4">
+                <img src="img/html555.png" id="icon">
+                <h4>HTML5</h4>
+            </div>
+            <div class="col-sm-4">
+                <img src="img/css333.png" id="icon">
+                <h4>CSS3</h4>
+            </div>
+            <div class="col-sm-4">
+                <img src="img/spring.png" id="icon">
+                <h4>Spring</h4>
+            </div>
+            <div class="col-sm-4">
+                <img src="img/sql.png" id="icon">
+                <h4>MySql</h4>
+            </div>
+            <div class="col-sm-4">
+                <img src="img/maven.png" id="icon">
+                <h4>maven</h4>
+            </div>
+        </div>
     </div>
-    <div class="block"></div>
-    
-    <div class="inline">
-        <a href="http://google.pl" target="_blank">Przejdź</a>
-    </div>
-    
-    
-    
-    
-    
+
     <div class="container">
-        <hr>    
-        <footer>
-            <p>&copy; 2016 Company, Inc.</p>
-        </footer>
+        <div class="row">
+            <h2>HOW I AM</h2>
+            <div class="col-md-6">
+                <h4>Lorem Ipsum</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec risus quis odio fermentum condimentum vitae ac magna. Ut auctor risus a massa eleifend fringilla. Maecenas mi leo, venenatis interdum dapibus ac, bibendum ut tellus. Pellentesque dui risus, pellentesque non sapien eget, lacinia sagittis velit. Cras justo sapien, cursus at cursus et, consequat in justo. Nulla eu dignissim nisi. Nullam nec pellentesque nisl. Donec tempus ac lorem pretium vehicula. Cras dictum dolor ornare, varius nibh in, pulvinar est. Curabitur ac dui arcu. Cras scelerisque eros et tortor vulputate rhoncus. Mauris tristique tellus at nisl bibendum tempus.
+                    
+                </p>
+                
+            </div>
+            <div class="col-md-6">
+                <img src="img/back-end.jpg" class="img-responsive">
+            </div>
+        </div>
     </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <h4>Technologia pierwszorzędna</h4>
+                    
+                <p> Proin blandit convallis felis sit amet placerat. Fusce et convallis neque, vitae facilisis est. Proin tempor lacus vel sem commodo tincidunt. Sed facilisis massa id arcu laoreet cursus. Nulla facilisi. Aliquam laoreet eleifend massa ac bibendum. Nulla facilisi. Curabitur eu massa id metus sodales semper at aliquet justo.</p>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <img src="img/spring.png" class="img-responsive">
+            </div>
     
-    <script
-    src="https://code.jquery.com/jquery-3.2.1.min.js"
-    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-    crossorigin="anonymous"></script>
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <h4>Technologia drugorzędna</h4>
+                    
+                <p> Proin blandit convallis felis sit amet placerat. Fusce et convallis neque, vitae facilisis est. Proin tempor lacus vel sem commodo tincidunt. Sed facilisis massa id arcu laoreet cursus. Nulla facilisi. Aliquam laoreet eleifend massa ac bibendum. Nulla facilisi. Curabitur eu massa id metus sodales semper at aliquet justo.</p>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <img src="img/maven.png" class="img-responsive">
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+           <h4><a href="#hidden" data-toggle="collapse">Lern more about.....</a></h4>
+           <div id="hidden" class="collapse">
+                <h4>Lorem Ipsum</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec risus quis odio fermentum condimentum vitae ac magna. Ut auctor risus a massa eleifend fringilla. Maecenas mi leo, venenatis interdum dapibus ac, bibendum ut tellus. Pellentesque dui risus, pellentesque non sapien eget, lacinia sagittis velit. Cras justo sapien, cursus at cursus et, consequat in justo. Nulla eu dignissim nisi. Nullam nec pellentesque nisl. Donec tempus ac lorem pretium vehicula. Cras dictum dolor ornare, varius nibh in, pulvinar est. Curabitur ac dui arcu. Cras scelerisque eros et tortor vulputate rhoncus. Mauris tristique tellus at nisl bibendum tempus.
+                    
+                </p>
+                <p> Proin blandit convallis felis sit amet placerat. Fusce et convallis neque, vitae facilisis est. Proin tempor lacus vel sem commodo tincidunt. Sed facilisis massa id arcu laoreet cursus. Nulla facilisi. Aliquam laoreet eleifend massa ac bibendum. Nulla facilisi. Curabitur eu massa id metus sodales semper at aliquet justo.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="container-fluid text-center">
+        <div class="row">
+            <div class="col-sm-4">
+                <h3>Contact Us</h3>
+                <br>
+                <h4>Our address and contact info here.</h4>
+            </div>
+            <div class="col-sm-4">
+                <h3>Connect</h3>
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-linkedin"></a>
+                <a href="#" class="fa fa-github"></a>
+            </div>
+            <div class="col-sm-4">
+                <img scr="img/...png" class="icon">
+            </div>
+        </div>
+    </footer>
+
+
+
 </body>
 </html>
